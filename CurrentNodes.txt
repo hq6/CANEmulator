@@ -1,0 +1,8 @@
+# NodeID \t Class
+# While it is true that NodeID does not exist in CAN protocol, it will make it easier to debug as we play.
+# Anything that starts with # is a comment.
+0   RandomHostProcessor
+3   RandomHostProcessor
+4   RandomHostProcessor
+1   RecordingHostProcessor
+#2   RecordingHostProcessor

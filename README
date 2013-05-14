@@ -1,0 +1,26 @@
+RUNNING
+
+The following commands will get the system up and running.
+
+    javac *.java
+    java Main
+
+
+ADDING CUSTOM CAN NODES
+
+1. Write a class which implements IHostProcessor. Put the high-level functionality into
+   the `run()` method, and observe that `messageReady()` will be called
+   whenever a message is received on the CAN bus.  See `RandomHostProcessor` and
+   `RecordingHostProcessor` for examples.
+2. If you want to experiment with a different CAN controller (e. g. extended
+   CAN), implement ICANController.
+3. Add a line to CurrentNodes.txt, with a unique integer (for an ID) followed
+   by the name of your class. Observe that Standard CAN has anonymous devices; the
+   ID is just for ease of debugging.
+
+
+NOTE
+
+This code is written in Java to take advantage of Reflection.  Maybe a better
+choice would have been C++, which allows explicit bit-fields, because that
+would make it easier to have semantic match with bits.
